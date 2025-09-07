@@ -8,6 +8,7 @@ WHERE t.transaction_id IS NULL
 GROUP BY v.customer_id
 
 /*
+use * or select non null column when aggregating
 COUNT(column) → counts only non-NULL values.
 COUNT(*)      → counts all rows, regardless of NULLs.
 SUM(column)   → adds up only the non-NULL values; NULLs are ignored.
